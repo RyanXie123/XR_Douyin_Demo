@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "ChatListController.h"
+#import "NetworkHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -19,8 +21,12 @@
     // Override point for customization after application launch.
     
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    _window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[ViewController new]];
+    _window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[ChatListController new]];
     [_window makeKeyAndVisible];
+    [NetworkHelper startListening];
+    
+    
+    
     return YES;
 }
 

@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2F17984CB7E5B0CF7B01E6E1 /* libPods-Douyin_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8C82A8ED64854F3BCC79FF /* libPods-Douyin_Demo.a */; };
+		CF69FEB021AB95F0008211B4 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */; };
+		CF69FEB321AB9F29008211B4 /* VisitorRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEB221AB9F29008211B4 /* VisitorRequest.m */; };
+		CF69FEB621ABA3B5008211B4 /* BaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEB521ABA3B5008211B4 /* BaseResponse.m */; };
+		CF69FEBB21ABA6C6008211B4 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEBA21ABA6C6008211B4 /* BaseModel.m */; };
+		CF69FEBE21ABA70D008211B4 /* Visitor.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEBD21ABA70D008211B4 /* Visitor.m */; };
+		CF69FEC121ABA75C008211B4 /* PictureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEC021ABA75C008211B4 /* PictureInfo.m */; };
+		CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEC321ABC7FF008211B4 /* VisitorResponse.m */; };
+		CF69FEC921ABD20B008211B4 /* ChatListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEC821ABD20B008211B4 /* ChatListController.m */; };
+		CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECC21ABD83F008211B4 /* TextMessageCell.m */; };
+		CF69FED021ABD8CA008211B4 /* GroupChat.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECF21ABD8CA008211B4 /* GroupChat.m */; };
 		CFE86EFE21A80CAB0066FC91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86EFD21A80CAB0066FC91 /* AppDelegate.m */; };
 		CFE86F0121A80CAC0066FC91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86F0021A80CAC0066FC91 /* ViewController.m */; };
 		CFE86F0421A80CAC0066FC91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE86F0221A80CAC0066FC91 /* Main.storyboard */; };
@@ -23,6 +33,26 @@
 /* Begin PBXFileReference section */
 		0D8C82A8ED64854F3BCC79FF /* libPods-Douyin_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Douyin_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		805280F1A91483F770059953 /* Pods-Douyin_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyin_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Douyin_Demo/Pods-Douyin_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		CF69FEAE21AB95F0008211B4 /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		CF69FEB121AB9F29008211B4 /* VisitorRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisitorRequest.h; sourceTree = "<group>"; };
+		CF69FEB221AB9F29008211B4 /* VisitorRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisitorRequest.m; sourceTree = "<group>"; };
+		CF69FEB421ABA3B5008211B4 /* BaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseResponse.h; sourceTree = "<group>"; };
+		CF69FEB521ABA3B5008211B4 /* BaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseResponse.m; sourceTree = "<group>"; };
+		CF69FEB921ABA6C6008211B4 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		CF69FEBA21ABA6C6008211B4 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		CF69FEBC21ABA70D008211B4 /* Visitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Visitor.h; sourceTree = "<group>"; };
+		CF69FEBD21ABA70D008211B4 /* Visitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Visitor.m; sourceTree = "<group>"; };
+		CF69FEBF21ABA75C008211B4 /* PictureInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureInfo.h; sourceTree = "<group>"; };
+		CF69FEC021ABA75C008211B4 /* PictureInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureInfo.m; sourceTree = "<group>"; };
+		CF69FEC221ABC7FF008211B4 /* VisitorResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisitorResponse.h; sourceTree = "<group>"; };
+		CF69FEC321ABC7FF008211B4 /* VisitorResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisitorResponse.m; sourceTree = "<group>"; };
+		CF69FEC721ABD20B008211B4 /* ChatListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatListController.h; sourceTree = "<group>"; };
+		CF69FEC821ABD20B008211B4 /* ChatListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatListController.m; sourceTree = "<group>"; };
+		CF69FECB21ABD83F008211B4 /* TextMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextMessageCell.h; sourceTree = "<group>"; };
+		CF69FECC21ABD83F008211B4 /* TextMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextMessageCell.m; sourceTree = "<group>"; };
+		CF69FECE21ABD8CA008211B4 /* GroupChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChat.h; sourceTree = "<group>"; };
+		CF69FECF21ABD8CA008211B4 /* GroupChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChat.m; sourceTree = "<group>"; };
 		CFE86EF921A80CAB0066FC91 /* Douyin_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Douyin_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE86EFC21A80CAB0066FC91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFE86EFD21A80CAB0066FC91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,6 +104,59 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CF69FEB721ABA3BD008211B4 /* HttpResponse */ = {
+			isa = PBXGroup;
+			children = (
+				CF69FEB421ABA3B5008211B4 /* BaseResponse.h */,
+				CF69FEB521ABA3B5008211B4 /* BaseResponse.m */,
+				CF69FEC221ABC7FF008211B4 /* VisitorResponse.h */,
+				CF69FEC321ABC7FF008211B4 /* VisitorResponse.m */,
+			);
+			path = HttpResponse;
+			sourceTree = "<group>";
+		};
+		CF69FEB821ABA491008211B4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CF69FEB921ABA6C6008211B4 /* BaseModel.h */,
+				CF69FEBA21ABA6C6008211B4 /* BaseModel.m */,
+				CF69FEBC21ABA70D008211B4 /* Visitor.h */,
+				CF69FEBD21ABA70D008211B4 /* Visitor.m */,
+				CF69FEBF21ABA75C008211B4 /* PictureInfo.h */,
+				CF69FEC021ABA75C008211B4 /* PictureInfo.m */,
+				CF69FECE21ABD8CA008211B4 /* GroupChat.h */,
+				CF69FECF21ABD8CA008211B4 /* GroupChat.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CF69FEC521ABD174008211B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF69FEC621ABD1DA008211B4 /* GroupChat */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CF69FEC621ABD1DA008211B4 /* GroupChat */ = {
+			isa = PBXGroup;
+			children = (
+				CF69FEC721ABD20B008211B4 /* ChatListController.h */,
+				CF69FEC821ABD20B008211B4 /* ChatListController.m */,
+				CF69FECB21ABD83F008211B4 /* TextMessageCell.h */,
+				CF69FECC21ABD83F008211B4 /* TextMessageCell.m */,
+			);
+			path = GroupChat;
+			sourceTree = "<group>";
+		};
+		CF69FECA21ABD4D5008211B4 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				CFE86F0521A80CAC0066FC91 /* Assets.xcassets */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		CFE86EF021A80CAB0066FC91 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +178,9 @@
 		CFE86EFB21A80CAB0066FC91 /* Douyin_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				CF69FECA21ABD4D5008211B4 /* resource */,
+				CF69FEC521ABD174008211B4 /* ViewController */,
+				CF69FEB821ABA491008211B4 /* Entity */,
 				CFF48E9321A9369F00181F85 /* Category */,
 				CFF48E8D21A9099B00181F85 /* Util */,
 				CFF48E8921A9059900181F85 /* Controller */,
@@ -104,7 +190,6 @@
 				CFE86EFF21A80CAC0066FC91 /* ViewController.h */,
 				CFE86F0021A80CAC0066FC91 /* ViewController.m */,
 				CFE86F0221A80CAC0066FC91 /* Main.storyboard */,
-				CFE86F0521A80CAC0066FC91 /* Assets.xcassets */,
 				CFE86F0721A80CAC0066FC91 /* LaunchScreen.storyboard */,
 				CFE86F0A21A80CAC0066FC91 /* Info.plist */,
 				CFE86F0B21A80CAC0066FC91 /* main.m */,
@@ -115,6 +200,7 @@
 		CFF48E8521A9043200181F85 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CF69FEB721ABA3BD008211B4 /* HttpResponse */,
 				CFF48E8F21A92D8A00181F85 /* HttpRequest */,
 				CFF48E8621A9046B00181F85 /* NetworkHelper.h */,
 				CFF48E8721A9046B00181F85 /* NetworkHelper.m */,
@@ -144,6 +230,8 @@
 			children = (
 				CFF48E9021A92DAE00181F85 /* BaseRequest.h */,
 				CFF48E9121A92DAE00181F85 /* BaseRequest.m */,
+				CF69FEB121AB9F29008211B4 /* VisitorRequest.h */,
+				CF69FEB221AB9F29008211B4 /* VisitorRequest.m */,
 			);
 			path = HttpRequest;
 			sourceTree = "<group>";
@@ -153,6 +241,8 @@
 			children = (
 				CFF48E9421A936C000181F85 /* UIWindow+Extension.h */,
 				CFF48E9521A936C000181F85 /* UIWindow+Extension.m */,
+				CF69FEAE21AB95F0008211B4 /* NSString+Extension.h */,
+				CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -249,13 +339,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF69FEC121ABA75C008211B4 /* PictureInfo.m in Sources */,
 				CFF48E8821A9046B00181F85 /* NetworkHelper.m in Sources */,
 				CFF48E9621A936C000181F85 /* UIWindow+Extension.m in Sources */,
+				CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */,
 				CFF48E8C21A905BB00181F85 /* BaseViewController.m in Sources */,
+				CF69FEBB21ABA6C6008211B4 /* BaseModel.m in Sources */,
+				CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */,
 				CFE86F0121A80CAC0066FC91 /* ViewController.m in Sources */,
 				CFE86F0C21A80CAC0066FC91 /* main.m in Sources */,
+				CF69FEC921ABD20B008211B4 /* ChatListController.m in Sources */,
+				CF69FEB621ABA3B5008211B4 /* BaseResponse.m in Sources */,
 				CFF48E9221A92DAE00181F85 /* BaseRequest.m in Sources */,
+				CF69FEBE21ABA70D008211B4 /* Visitor.m in Sources */,
+				CF69FED021ABD8CA008211B4 /* GroupChat.m in Sources */,
 				CFE86EFE21A80CAB0066FC91 /* AppDelegate.m in Sources */,
+				CF69FEB321AB9F29008211B4 /* VisitorRequest.m in Sources */,
+				CF69FEB021AB95F0008211B4 /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +506,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ryan.Douyin-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = demo.douyin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -425,7 +525,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ryan.Douyin-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = demo.douyin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

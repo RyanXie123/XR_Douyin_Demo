@@ -49,17 +49,28 @@ static char tapKey;
     
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleGesture:)];
+    [window addGestureRecognizer:tap];
+    [window addSubview:tips];
     
-    
+    objc_setAssociatedObject(self, &tipsKey, tips, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &tapKey, tap, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self performSelector:@selector(dismiss) withObject:nil afterDelay:2.0f];
     
 }
 
-
++ (void)handleGesture:(UIGestureRecognizer *)sender {
+    if (!sender || !sender.view) {
+        return;
+    }
+    
+    [self dismiss];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(dismiss) object:nil];
+}
 
 
 + (void)dismiss {
     UIWindow *window = [[[UIApplication sharedApplication] delegate]window];
-    UITapGestureRecognizer *tap = objc_getAssociatedObject(self, &tipsKey);
+    UITapGestureRecognizer *tap = objc_getAssociatedObject(self, &tapKey);
     [window removeGestureRecognizer:tap];
     
     UITextView *tips = objc_getAssociatedObject(self, &tipsKey);

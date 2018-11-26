@@ -9,16 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <AFHTTPSessionManager.h>
 #import "BaseRequest.h"
+#import "VisitorResponse.h"
 
 extern NSString *const BaseUrl;
 extern NSString *const NetworkDomain;
-
+extern NSString *const NetworkStatusChangeNotification;
 
 typedef enum {
     HttpResquestFailed = -1000,
     UrlResourceFailed = -2000
 } NetworkError;
 
+typedef void(^UploadProgress)(CGFloat percent);
 typedef void(^HttpSuccess)(id data);
 typedef void(^HttpFailure)(NSError *error);
 
@@ -26,9 +28,16 @@ typedef void(^HttpFailure)(NSError *error);
 
 
 + (AFHTTPSessionManager *)sharedManager;
-
 + (NSURLSessionTask *)getWithUrlPath:(NSString *)urlPath request:(BaseRequest *)request success:(HttpSuccess)success failure:(HttpFailure)failure;
++ (NSURLSessionDataTask *)postWithUrlPath:(NSString *)urlPath request:(BaseRequest *)request success:(HttpSuccess)success failure:(HttpFailure)failure;
++ (NSURLSessionDataTask *)uploadWithUrlPath:(NSString *)urlPath data:(NSData *)data request:(BaseRequest *)request progress:(UploadProgress)progress success:(HttpSuccess)success failure:(HttpFailure)failure;
++ (NSURLSessionDataTask *)uploadWithUrlPath:(NSString *)urlPath dataArray:(NSArray<NSData *> *)dataArray request:(BaseRequest *)request progress:(UploadProgress)progress success:(HttpSuccess)success failure:(HttpFailure)failure;
 
+
++ (AFNetworkReachabilityManager *)sharedRechabilityManager;
++ (void)startListening;
++ (AFNetworkReachabilityStatus)networkStatus;
++ (BOOL)isNotReachabelStatus:(AFNetworkReachabilityStatus)status;
 
 @end
 

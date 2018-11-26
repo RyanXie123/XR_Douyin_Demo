@@ -8,12 +8,20 @@
 
 #ifndef Constants_h
 #define Constants_h
+
+
+#import "UIWindow+Extension.h"
+#import "NSString+Extension.h"
+
+//UDID md5_udid
+#define UDID [[[UIDevice currentDevice]identifierForVendor] UUIDString]
+
 //size
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
 #define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
-
+#define SafeAreaTopHeight ((ScreenHeight >= 812.0) && [[UIDevice currentDevice].model isEqualToString:@"iPhone"] ? 88 : 64)
 
 //color
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
@@ -58,5 +66,18 @@ alpha:1.0]
 #define ColorGrayDark RGBA(25.0, 25.0, 35.0, 1.0)
 #define ColorGrayDarkAlpha95 RGBA(25.0, 25.0, 35.0, 0.95)
 #define ColorSmoke RGBA(230.0, 230.0, 230.0, 1.0)
+
+
+
+
+
+
+#define writeVisitor(visitor)\
+({\
+NSDictionary *dic = [visitor toDictionary];\
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];\
+[defaults setObject:dic forKey:@"visitor"];\
+[defaults synchronize];\
+})
 
 #endif /* Constants_h */
