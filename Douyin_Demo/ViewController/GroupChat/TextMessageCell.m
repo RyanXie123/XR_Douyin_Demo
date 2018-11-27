@@ -7,18 +7,31 @@
 //
 
 #import "TextMessageCell.h"
+static const CGFloat kTextMsgMaxWidth   = 220;
+
 
 @implementation TextMessageCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.backgroundColor = [UIColor clearColor];
+        
+        
+        
+    }
+    return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+
+
+
++ (CGFloat)cellHeight:(GroupChat *)chat {
+    return  chat.contentSize.height;
 }
 
++ (CGSize)contentSize:(GroupChat *)chat {
+    return [chat.cellAttributedString multiLineSize:kTextMsgMaxWidth];
+}
 @end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2F17984CB7E5B0CF7B01E6E1 /* libPods-Douyin_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8C82A8ED64854F3BCC79FF /* libPods-Douyin_Demo.a */; };
+		CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF21EC2421ACE87A002B83D6 /* GroupChatListRequest.m */; };
+		CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF21EC2A21ACEBEF002B83D6 /* GroupChatListResponse.m */; };
+		CF5E893D21AD217E004814D8 /* BaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E893C21AD217E004814D8 /* BaseMessageCell.m */; };
+		CF5E894021AD249F004814D8 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E893F21AD249F004814D8 /* NSMutableAttributedString+Extension.m */; };
 		CF69FEB021AB95F0008211B4 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */; };
 		CF69FEB321AB9F29008211B4 /* VisitorRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEB221AB9F29008211B4 /* VisitorRequest.m */; };
 		CF69FEB621ABA3B5008211B4 /* BaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEB521ABA3B5008211B4 /* BaseResponse.m */; };
@@ -33,6 +37,14 @@
 /* Begin PBXFileReference section */
 		0D8C82A8ED64854F3BCC79FF /* libPods-Douyin_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Douyin_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		805280F1A91483F770059953 /* Pods-Douyin_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Douyin_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Douyin_Demo/Pods-Douyin_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		CF21EC2321ACE87A002B83D6 /* GroupChatListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChatListRequest.h; sourceTree = "<group>"; };
+		CF21EC2421ACE87A002B83D6 /* GroupChatListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChatListRequest.m; sourceTree = "<group>"; };
+		CF21EC2921ACEBEF002B83D6 /* GroupChatListResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChatListResponse.h; sourceTree = "<group>"; };
+		CF21EC2A21ACEBEF002B83D6 /* GroupChatListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChatListResponse.m; sourceTree = "<group>"; };
+		CF5E893B21AD217E004814D8 /* BaseMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMessageCell.h; sourceTree = "<group>"; };
+		CF5E893C21AD217E004814D8 /* BaseMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMessageCell.m; sourceTree = "<group>"; };
+		CF5E893E21AD249F004814D8 /* NSMutableAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Extension.h"; sourceTree = "<group>"; };
+		CF5E893F21AD249F004814D8 /* NSMutableAttributedString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Extension.m"; sourceTree = "<group>"; };
 		CF69FEAE21AB95F0008211B4 /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		CF69FEB121AB9F29008211B4 /* VisitorRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisitorRequest.h; sourceTree = "<group>"; };
@@ -111,6 +123,8 @@
 				CF69FEB521ABA3B5008211B4 /* BaseResponse.m */,
 				CF69FEC221ABC7FF008211B4 /* VisitorResponse.h */,
 				CF69FEC321ABC7FF008211B4 /* VisitorResponse.m */,
+				CF21EC2921ACEBEF002B83D6 /* GroupChatListResponse.h */,
+				CF21EC2A21ACEBEF002B83D6 /* GroupChatListResponse.m */,
 			);
 			path = HttpResponse;
 			sourceTree = "<group>";
@@ -145,6 +159,8 @@
 				CF69FEC821ABD20B008211B4 /* ChatListController.m */,
 				CF69FECB21ABD83F008211B4 /* TextMessageCell.h */,
 				CF69FECC21ABD83F008211B4 /* TextMessageCell.m */,
+				CF5E893B21AD217E004814D8 /* BaseMessageCell.h */,
+				CF5E893C21AD217E004814D8 /* BaseMessageCell.m */,
 			);
 			path = GroupChat;
 			sourceTree = "<group>";
@@ -232,6 +248,8 @@
 				CFF48E9121A92DAE00181F85 /* BaseRequest.m */,
 				CF69FEB121AB9F29008211B4 /* VisitorRequest.h */,
 				CF69FEB221AB9F29008211B4 /* VisitorRequest.m */,
+				CF21EC2321ACE87A002B83D6 /* GroupChatListRequest.h */,
+				CF21EC2421ACE87A002B83D6 /* GroupChatListRequest.m */,
 			);
 			path = HttpRequest;
 			sourceTree = "<group>";
@@ -243,6 +261,8 @@
 				CFF48E9521A936C000181F85 /* UIWindow+Extension.m */,
 				CF69FEAE21AB95F0008211B4 /* NSString+Extension.h */,
 				CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */,
+				CF5E893E21AD249F004814D8 /* NSMutableAttributedString+Extension.h */,
+				CF5E893F21AD249F004814D8 /* NSMutableAttributedString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -340,8 +360,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF69FEC121ABA75C008211B4 /* PictureInfo.m in Sources */,
+				CF5E894021AD249F004814D8 /* NSMutableAttributedString+Extension.m in Sources */,
 				CFF48E8821A9046B00181F85 /* NetworkHelper.m in Sources */,
 				CFF48E9621A936C000181F85 /* UIWindow+Extension.m in Sources */,
+				CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */,
+				CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */,
 				CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */,
 				CFF48E8C21A905BB00181F85 /* BaseViewController.m in Sources */,
 				CF69FEBB21ABA6C6008211B4 /* BaseModel.m in Sources */,
@@ -353,6 +376,7 @@
 				CFF48E9221A92DAE00181F85 /* BaseRequest.m in Sources */,
 				CF69FEBE21ABA70D008211B4 /* Visitor.m in Sources */,
 				CF69FED021ABD8CA008211B4 /* GroupChat.m in Sources */,
+				CF5E893D21AD217E004814D8 /* BaseMessageCell.m in Sources */,
 				CFE86EFE21A80CAB0066FC91 /* AppDelegate.m in Sources */,
 				CF69FEB321AB9F29008211B4 /* VisitorRequest.m in Sources */,
 				CF69FEB021AB95F0008211B4 /* NSString+Extension.m in Sources */,

@@ -16,7 +16,7 @@ NSString *const NetworkDomain = @"com.start.douyin";
 NSString *const NetworkStatusChangeNotification = @"NetworkStatusChangeNotification";
 //创建访客用户接口
 NSString *const CreateVisitorPath = @"visitor/create";
-
+NSString *const FindGroupChatByPagePath = @"groupchat/list";
 
 @implementation NetworkHelper
 

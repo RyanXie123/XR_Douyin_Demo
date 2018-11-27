@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VisitorResponse : BaseResponse
-@property (nonatomic, copy) Visitor *data;
+@property (nonatomic, strong) Visitor *data;
 @end
 
 NS_ASSUME_NONNULL_END

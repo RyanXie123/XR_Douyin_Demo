@@ -9,5 +9,14 @@
 #import "GroupChat.h"
 
 @implementation GroupChat
-
++ (BOOL)propertyIsIgnored:(NSString *)propertyName {
+    if([propertyName isEqualToString:@"taskId"]
+       ||[propertyName isEqualToString:@"isTemp"]
+       ||[propertyName isEqualToString:@"picImage"]
+       ||[propertyName isEqualToString:@"contentSize"]
+       ||[propertyName isEqualToString:@"cellHeight"]
+       ||[propertyName isEqualToString:@"cellAttributedString"])
+        return YES;
+    return NO;
+}
 @end

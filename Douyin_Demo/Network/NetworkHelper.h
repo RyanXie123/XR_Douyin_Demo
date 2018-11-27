@@ -10,11 +10,13 @@
 #import <AFHTTPSessionManager.h>
 #import "BaseRequest.h"
 #import "VisitorResponse.h"
+#import "GroupChatListRequest.h"
+#import "GroupChatListResponse.h"
 
 extern NSString *const BaseUrl;
 extern NSString *const NetworkDomain;
 extern NSString *const NetworkStatusChangeNotification;
-
+extern NSString *const FindGroupChatByPagePath;
 typedef enum {
     HttpResquestFailed = -1000,
     UrlResourceFailed = -2000

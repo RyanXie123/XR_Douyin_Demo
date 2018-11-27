@@ -10,6 +10,9 @@
 #import "Visitor.h"
 #import "PictureInfo.h"
 
+@protocol GroupChat;
+
+
 @interface GroupChat : BaseModel
 @property (nonatomic , copy) NSString              *id;
 @property (nonatomic , copy) NSString              *msg_type;
@@ -23,6 +26,15 @@
 
 
 
+@property (nonatomic , assign) NSInteger                    taskId;
+@property (nonatomic , assign) BOOL                         isTemp;
+@property (nonatomic , assign) BOOL                         isFailed;
+@property (nonatomic , assign) BOOL                         isCompleted;
+@property (nonatomic , assign) CGFloat                      percent;
+@property (nonatomic , strong) UIImage                      *picImage;
+@property (nonatomic , assign) CGSize                       contentSize;
+@property (nonatomic , assign) CGFloat                      cellHeight;
+@property (nonatomic , strong) NSMutableAttributedString    *cellAttributedString;
 @end
 
 

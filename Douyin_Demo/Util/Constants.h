@@ -12,6 +12,7 @@
 
 #import "UIWindow+Extension.h"
 #import "NSString+Extension.h"
+#import "NSMutableAttributedString+Extension.h"
 
 //UDID md5_udid
 #define UDID [[[UIDevice currentDevice]identifierForVendor] UUIDString]
@@ -68,6 +69,24 @@ alpha:1.0]
 #define ColorSmoke RGBA(230.0, 230.0, 230.0, 1.0)
 
 
+//Font
+#define SuperSmallFont [UIFont systemFontOfSize:10.0]
+#define SuperSmallBoldFont [UIFont boldSystemFontOfSize:10.0]
+
+#define SmallFont [UIFont systemFontOfSize:12.0]
+#define SmallBoldFont [UIFont boldSystemFontOfSize:12.0]
+
+#define MediumFont [UIFont systemFontOfSize:14.0]
+#define MediumBoldFont [UIFont boldSystemFontOfSize:14.0]
+
+#define BigFont [UIFont systemFontOfSize:16.0]
+#define BigBoldFont [UIFont boldSystemFontOfSize:16.0]
+
+#define LargeFont [UIFont systemFontOfSize:18.0]
+#define LargeBoldFont [UIFont boldSystemFontOfSize:18.0]
+
+#define SuperBigFont [UIFont systemFontOfSize:26.0]
+#define SuperBigBoldFont [UIFont boldSystemFontOfSize:26.0]
 
 
 
