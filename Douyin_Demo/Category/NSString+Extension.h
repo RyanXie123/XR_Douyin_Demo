@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+- (NSString *)md5;
+
 
 //获取当前时间戳
 + (NSString *)currentTime;

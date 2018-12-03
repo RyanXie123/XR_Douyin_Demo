@@ -14,15 +14,20 @@
 #import "NSString+Extension.h"
 #import "NSMutableAttributedString+Extension.h"
 #import "UIImage+Extension.h"
+#import "UIImageView+WebCache.h"
 //UDID md5_udid
 #define UDID [[[UIDevice currentDevice]identifierForVendor] UUIDString]
-
+#define MD5_UDID [UDID md5]
 //size
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define ScreenFrame [UIScreen mainScreen].bounds
 
 #define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
 #define SafeAreaTopHeight ((ScreenHeight >= 812.0) && [[UIDevice currentDevice].model isEqualToString:@"iPhone"] ? 88 : 64)
+#define SafeAreaBottomHeight ((ScreenHeight >= 812.0) && [[UIDevice currentDevice].model isEqualToString:@"iPhone"]  ? 30 : 0)
+
+
 
 //color
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
@@ -99,4 +104,26 @@ NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];\
 [defaults synchronize];\
 })
 
+#define readVisitor()\
+({\
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];\
+NSDictionary *dic = [defaults objectForKey:@"visitor"];\
+Visitor *visitor = [[Visitor alloc] initWithDictionary:dic error:nil];\
+(visitor);\
+})
+
+//safe thread
+#define dispatch_main_sync_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_sync(dispatch_get_main_queue(), block);\
+}
+
+#define dispatch_main_async_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_async(dispatch_get_main_queue(), block);\
+}
 #endif /* Constants_h */

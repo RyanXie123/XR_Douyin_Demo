@@ -9,10 +9,19 @@
 #import "ChatListController.h"
 #import "NetworkHelper.h"
 #import "TextMessageCell.h"
-
-@interface ChatListController ()<UITableViewDataSource,UITableViewDelegate>
+#import "Visitor.h"
+#import "RefreshControl.h"
+#import "ChatTextView.h"
+@interface ChatListController ()<UITableViewDataSource,UITableViewDelegate,ChatTextViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) RefreshControl *refreshControl;
+@property (nonatomic, strong) ChatTextView *textView;
+
 @property (nonatomic, strong) NSMutableArray<GroupChat *> *data;
+@property (nonatomic, assign) NSInteger pageIndex;
+@property (nonatomic, assign) NSInteger pageSize;
+@property (nonatomic, strong) Visitor *visitor;
+
 @end
 
 @implementation ChatListController
@@ -20,10 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationBarTitle:@"Chat"];
-    
+    _visitor = readVisitor();
     
     _data = [NSMutableArray array];
-    
+    _pageSize = 20;
+    _pageIndex = 0;
     
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, SafeAreaTopHeight, ScreenWidth, ScreenHeight - SafeAreaTopHeight - 10)];
     _tableView.backgroundColor = ColorClear;
@@ -31,22 +41,39 @@
     _tableView.dataSource = self;
     _tableView.alwaysBounceVertical = YES;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     if (@available(iOS 11.0, *)) {
-        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
     }else {
-        self.automaticallyAdjustsScrollViewInsets = NO;
+        self.automaticallyAdjustsScrollViewInsets = YES;
     }
     
     [_tableView registerClass:[TextMessageCell class] forCellReuseIdentifier:NSStringFromClass(TextMessageCell.class)];
-    
-    
     [self.view addSubview:_tableView];
 
-    [self loadData:0 pageSize:20];
+    
+    
+    _refreshControl = [RefreshControl new];
+    __weak typeof(self) weakSelf = self;
+    [_refreshControl setOnRefresh:^{
+        [weakSelf loadData:weakSelf.pageIndex pageSize:weakSelf.pageSize];
+    }];
+    [_tableView addSubview:_refreshControl];
+    
+    _textView = [ChatTextView new];
+    _textView.delegate = self;
+    
+    [self loadData:_pageIndex pageSize:_pageSize];
     
  
     
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [_textView show];
+}
+
 
 
 
@@ -59,10 +86,22 @@
     [NetworkHelper getWithUrlPath:FindGroupChatByPagePath request:request success:^(id data) {
         NSError *error = nil;
         GroupChatListResponse *response = [[GroupChatListResponse alloc]initWithDictionary:data error:&error];
+        NSInteger preCount = weakSelf.data.count;
         
+        [UIView setAnimationsEnabled:NO];
         [weakSelf processData:response.data];
-    } failure:^(NSError *error) {
+        NSInteger currentCount = weakSelf.data.count;
         
+        
+        if (weakSelf.pageIndex ++ == 0 || preCount == 0 || (currentCount - preCount) <= 0) {
+            [weakSelf scrollToBottom];
+        }else {
+            [weakSelf.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:(currentCount - preCount) inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+        }
+        [UIView setAnimationsEnabled:YES];
+        [weakSelf.refreshControl endRefresh];
+    } failure:^(NSError *error) {
+        [weakSelf.refreshControl endRefresh];
     }];
 }
 - (void)processData:(NSArray<GroupChat *> *)data {
@@ -82,6 +121,11 @@
     NSIndexSet *indexes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [tempArray count])];
     [self.data insertObjects:tempArray atIndexes:indexes];
     [self.tableView reloadData];
+}
+
+
+- (void)onChatViewHeightChange:(CGFloat)height {
+    _tableView.contentInset = UIEdgeInsetsMake(0, 0, height, 0);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -111,6 +155,15 @@
         return cell;
 //    }
 }
+
+
+- (void)scrollToBottom {
+    if (self.data > 0) {
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.data.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    }
+}
+
+
 
 - (NSMutableAttributedString *)cellAttributedString:(GroupChat *)chat {
     if([chat.msg_type isEqualToString:@"system"]){

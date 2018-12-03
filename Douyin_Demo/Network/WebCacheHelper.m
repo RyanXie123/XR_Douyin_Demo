@@ -306,6 +306,28 @@
 @end
 
 
+@implementation WebCombineOperation
+
+//取消查询缓存任务NSOperation任务和下载资源 Webdownloadoperation
+- (void)cancel {
+    if (self.cacheOperation) {
+        [self.cacheOperation cancel];
+        self.cacheOperation = nil;
+    }
+    
+    if (self.downloadOperation) {
+        [self.downloadOperation cancel];
+        self.downloadOperation = nil;
+    }
+    
+    if (self.cancelBlock) {
+        self.cancelBlock();
+        _cancelBlock = nil;
+    }
+}
+
+@end
+
 
 @implementation WebDownloader
 

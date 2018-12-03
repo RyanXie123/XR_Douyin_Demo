@@ -46,6 +46,9 @@ typedef void(^WebDownloaderCancelBlock)(void);
 //下载网络资源任务
 @property (nonatomic, strong) WebDownLoaderOperation *downloadOperation;
 
+
+//网络资源下载取消后的回调block
+@property (copy, nonatomic) WebDownloaderCancelBlock cancelBlock;
 - (void)cancel;
 @end
 

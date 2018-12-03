@@ -10,6 +10,8 @@
 		2F17984CB7E5B0CF7B01E6E1 /* libPods-Douyin_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8C82A8ED64854F3BCC79FF /* libPods-Douyin_Demo.a */; };
 		CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF21EC2421ACE87A002B83D6 /* GroupChatListRequest.m */; };
 		CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF21EC2A21ACEBEF002B83D6 /* GroupChatListResponse.m */; };
+		CF50221421B50A29008AC826 /* RefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF50221321B50A29008AC826 /* RefreshControl.m */; };
+		CF50221721B51E50008AC826 /* ChatTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF50221621B51E50008AC826 /* ChatTextView.m */; };
 		CF5E893D21AD217E004814D8 /* BaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E893C21AD217E004814D8 /* BaseMessageCell.m */; };
 		CF5E894021AD249F004814D8 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E893F21AD249F004814D8 /* NSMutableAttributedString+Extension.m */; };
 		CF69FEB021AB95F0008211B4 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */; };
@@ -22,6 +24,7 @@
 		CF69FEC921ABD20B008211B4 /* ChatListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEC821ABD20B008211B4 /* ChatListController.m */; };
 		CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECC21ABD83F008211B4 /* TextMessageCell.m */; };
 		CF69FED021ABD8CA008211B4 /* GroupChat.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECF21ABD8CA008211B4 /* GroupChat.m */; };
+		CF6D154521B4D751007F9718 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D154421B4D751007F9718 /* UIImageView+WebCache.m */; };
 		CFC4E7D821AFC49F0000098F /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */; };
 		CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */; };
 		CFE86EFE21A80CAB0066FC91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86EFD21A80CAB0066FC91 /* AppDelegate.m */; };
@@ -43,6 +46,10 @@
 		CF21EC2421ACE87A002B83D6 /* GroupChatListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChatListRequest.m; sourceTree = "<group>"; };
 		CF21EC2921ACEBEF002B83D6 /* GroupChatListResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChatListResponse.h; sourceTree = "<group>"; };
 		CF21EC2A21ACEBEF002B83D6 /* GroupChatListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChatListResponse.m; sourceTree = "<group>"; };
+		CF50221221B50A29008AC826 /* RefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshControl.h; sourceTree = "<group>"; };
+		CF50221321B50A29008AC826 /* RefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshControl.m; sourceTree = "<group>"; };
+		CF50221521B51E50008AC826 /* ChatTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextView.h; sourceTree = "<group>"; };
+		CF50221621B51E50008AC826 /* ChatTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTextView.m; sourceTree = "<group>"; };
 		CF5E893B21AD217E004814D8 /* BaseMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMessageCell.h; sourceTree = "<group>"; };
 		CF5E893C21AD217E004814D8 /* BaseMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMessageCell.m; sourceTree = "<group>"; };
 		CF5E893E21AD249F004814D8 /* NSMutableAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Extension.h"; sourceTree = "<group>"; };
@@ -67,6 +74,8 @@
 		CF69FECC21ABD83F008211B4 /* TextMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextMessageCell.m; sourceTree = "<group>"; };
 		CF69FECE21ABD8CA008211B4 /* GroupChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChat.h; sourceTree = "<group>"; };
 		CF69FECF21ABD8CA008211B4 /* GroupChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChat.m; sourceTree = "<group>"; };
+		CF6D154321B4D751007F9718 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		CF6D154421B4D751007F9718 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		CFC4E7D621AFC49F0000098F /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		CFC4E7D921AFCA740000098F /* WebCacheHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebCacheHelper.h; sourceTree = "<group>"; };
@@ -154,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				CF69FEC621ABD1DA008211B4 /* GroupChat */,
+				CF50221221B50A29008AC826 /* RefreshControl.h */,
+				CF50221321B50A29008AC826 /* RefreshControl.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -167,6 +178,8 @@
 				CF69FECC21ABD83F008211B4 /* TextMessageCell.m */,
 				CF5E893B21AD217E004814D8 /* BaseMessageCell.h */,
 				CF5E893C21AD217E004814D8 /* BaseMessageCell.m */,
+				CF50221521B51E50008AC826 /* ChatTextView.h */,
+				CF50221621B51E50008AC826 /* ChatTextView.m */,
 			);
 			path = GroupChat;
 			sourceTree = "<group>";
@@ -273,6 +286,8 @@
 				CF5E893F21AD249F004814D8 /* NSMutableAttributedString+Extension.m */,
 				CFC4E7D621AFC49F0000098F /* UIImage+Extension.h */,
 				CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */,
+				CF6D154321B4D751007F9718 /* UIImageView+WebCache.h */,
+				CF6D154421B4D751007F9718 /* UIImageView+WebCache.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -371,13 +386,16 @@
 			files = (
 				CF69FEC121ABA75C008211B4 /* PictureInfo.m in Sources */,
 				CF5E894021AD249F004814D8 /* NSMutableAttributedString+Extension.m in Sources */,
+				CF6D154521B4D751007F9718 /* UIImageView+WebCache.m in Sources */,
 				CFF48E8821A9046B00181F85 /* NetworkHelper.m in Sources */,
 				CFF48E9621A936C000181F85 /* UIWindow+Extension.m in Sources */,
 				CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */,
 				CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */,
 				CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */,
 				CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */,
+				CF50221421B50A29008AC826 /* RefreshControl.m in Sources */,
 				CFF48E8C21A905BB00181F85 /* BaseViewController.m in Sources */,
+				CF50221721B51E50008AC826 /* ChatTextView.m in Sources */,
 				CF69FEBB21ABA6C6008211B4 /* BaseModel.m in Sources */,
 				CFC4E7D821AFC49F0000098F /* UIImage+Extension.m in Sources */,
 				CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */,
@@ -542,7 +560,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = demo.douyin;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.douyin.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -561,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = demo.douyin;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.douyin.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

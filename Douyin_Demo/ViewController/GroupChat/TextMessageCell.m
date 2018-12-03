@@ -55,12 +55,26 @@ static const CGFloat kTextMsgPadding    = 8;
     CGSize size = _chat.contentSize;
     
     
-    _avatar.frame = CGRectMake(kTextMsgPadding, kTextMsgPadding, 30, 30);
-    _textView.frame = CGRectMake(CGRectGetMaxX(self.avatar.frame) + kTextMsgPadding, kTextMsgPadding, size.width + kTextMsgCornerRadius * 2, size.height + kTextMsgCornerRadius * 2);
+    
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    
     self.backgroundLayer.path = [self createBezierPath:kTextMsgCornerRadius width:size.width height:size.height].CGPath;
     self.backgroundLayer.frame = CGRectMake(0, 0, size.width + kTextMsgCornerRadius * 2, size.height + kTextMsgCornerRadius * 2);
-    _backgroundLayer.fillColor = ColorWhite.CGColor;
     
+    
+    if([MD5_UDID isEqualToString:_chat.visitor.udid]){
+        _avatar.frame = CGRectMake(ScreenWidth - kTextMsgPadding - 30, kTextMsgPadding, 30, 30);
+        _textView.frame = CGRectMake(CGRectGetMinX(self.avatar.frame) - kTextMsgPadding - (size.width + kTextMsgCornerRadius * 2), kTextMsgPadding, size.width + kTextMsgCornerRadius * 2, size.height + kTextMsgCornerRadius * 2);
+        _backgroundLayer.transform = CATransform3DMakeRotation(M_PI, 0, 1, 0);
+        _backgroundLayer.fillColor = ColorThemeYellow.CGColor;
+        
+    }else {
+        _avatar.frame = CGRectMake(kTextMsgPadding, kTextMsgPadding, 30, 30);
+        _textView.frame = CGRectMake(CGRectGetMaxX(self.avatar.frame) + kTextMsgPadding, kTextMsgPadding, size.width + kTextMsgCornerRadius * 2, size.height + kTextMsgCornerRadius * 2);
+        _backgroundLayer.fillColor = ColorWhite.CGColor;
+    }
+    [CATransaction commit];
 //    _backgroundlayer.fillColor = ColorWhite.CGColor;
     
     
@@ -84,10 +98,10 @@ static const CGFloat kTextMsgPadding    = 8;
 //    }
     
     __weak __typeof(self) wself = self;
-    [_avatar setImageWithURL:[NSURL URLWithString:chat.visitor.avatar_thumbnail.url] progressBlock:^(CGFloat persent) {
-    } completedBlock:^(UIImage *image, NSError *error) {
+    [_avatar setImageWithURL:[NSURL URLWithString:chat.visitor.avatar_thumbnail.url] completedBlock:^(UIImage *image, NSError *error) {
         wself.avatar.image = [image drawCircleImage];
     }];
+
 }
 
 - (UIBezierPath *)createBezierPath:(CGFloat)cornerRadius width:(CGFloat)width height:(CGFloat)height {
