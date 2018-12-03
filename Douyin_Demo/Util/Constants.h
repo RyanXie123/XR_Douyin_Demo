@@ -13,7 +13,7 @@
 #import "UIWindow+Extension.h"
 #import "NSString+Extension.h"
 #import "NSMutableAttributedString+Extension.h"
-
+#import "UIImage+Extension.h"
 //UDID md5_udid
 #define UDID [[[UIDevice currentDevice]identifierForVendor] UUIDString]
 

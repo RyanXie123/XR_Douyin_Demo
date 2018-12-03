@@ -22,6 +22,8 @@
 		CF69FEC921ABD20B008211B4 /* ChatListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEC821ABD20B008211B4 /* ChatListController.m */; };
 		CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECC21ABD83F008211B4 /* TextMessageCell.m */; };
 		CF69FED021ABD8CA008211B4 /* GroupChat.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECF21ABD8CA008211B4 /* GroupChat.m */; };
+		CFC4E7D821AFC49F0000098F /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */; };
+		CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */; };
 		CFE86EFE21A80CAB0066FC91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86EFD21A80CAB0066FC91 /* AppDelegate.m */; };
 		CFE86F0121A80CAC0066FC91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86F0021A80CAC0066FC91 /* ViewController.m */; };
 		CFE86F0421A80CAC0066FC91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE86F0221A80CAC0066FC91 /* Main.storyboard */; };
@@ -65,6 +67,10 @@
 		CF69FECC21ABD83F008211B4 /* TextMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextMessageCell.m; sourceTree = "<group>"; };
 		CF69FECE21ABD8CA008211B4 /* GroupChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChat.h; sourceTree = "<group>"; };
 		CF69FECF21ABD8CA008211B4 /* GroupChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChat.m; sourceTree = "<group>"; };
+		CFC4E7D621AFC49F0000098F /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		CFC4E7D921AFCA740000098F /* WebCacheHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebCacheHelper.h; sourceTree = "<group>"; };
+		CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebCacheHelper.m; sourceTree = "<group>"; };
 		CFE86EF921A80CAB0066FC91 /* Douyin_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Douyin_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE86EFC21A80CAB0066FC91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFE86EFD21A80CAB0066FC91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -220,6 +226,8 @@
 				CFF48E8F21A92D8A00181F85 /* HttpRequest */,
 				CFF48E8621A9046B00181F85 /* NetworkHelper.h */,
 				CFF48E8721A9046B00181F85 /* NetworkHelper.m */,
+				CFC4E7D921AFCA740000098F /* WebCacheHelper.h */,
+				CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -263,6 +271,8 @@
 				CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */,
 				CF5E893E21AD249F004814D8 /* NSMutableAttributedString+Extension.h */,
 				CF5E893F21AD249F004814D8 /* NSMutableAttributedString+Extension.m */,
+				CFC4E7D621AFC49F0000098F /* UIImage+Extension.h */,
+				CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -366,8 +376,10 @@
 				CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */,
 				CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */,
 				CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */,
+				CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */,
 				CFF48E8C21A905BB00181F85 /* BaseViewController.m in Sources */,
 				CF69FEBB21ABA6C6008211B4 /* BaseModel.m in Sources */,
+				CFC4E7D821AFC49F0000098F /* UIImage+Extension.m in Sources */,
 				CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */,
 				CFE86F0121A80CAC0066FC91 /* ViewController.m in Sources */,
 				CFE86F0C21A80CAC0066FC91 /* main.m in Sources */,

@@ -75,6 +75,7 @@
         if ([chat.msg_type isEqualToString:@"text"]) {
             chat.cellAttributedString = [self cellAttributedString:chat];
             chat.contentSize = [self cellContentSize:chat];
+            chat.cellHeight = [self cellHeight:chat];
             [tempArray addObject:chat];
         }
     }
@@ -92,15 +93,21 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90;
+    GroupChat *chat = _data[indexPath.row];
+    
+    return chat.cellHeight;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GroupChat *chat = _data[indexPath.row];
 //    if ([chat.msg_type isEqualToString:@"text"]) {
-        TextMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(TextMessageCell.class) forIndexPath:indexPath];
-        cell.textLabel.text = chat.msg_content;
+    TextMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(TextMessageCell.class) forIndexPath:indexPath];
+    
+    [cell initData:chat];
+    
+    
+    
         return cell;
 //    }
 }
@@ -131,6 +138,21 @@
     }else {
 //        return [TimeCell contentSize:chat];
         return CGSizeZero;
+    }
+}
+
+- (CGFloat)cellHeight:(GroupChat *)chat {
+    if([chat.msg_type isEqualToString:@"system"]){
+//        return [SystemMessageCell cellHeight:chat];
+        return 0;
+    }else if([chat.msg_type isEqualToString:@"text"]){
+        return [TextMessageCell cellHeight:chat];
+    }else  if([chat.msg_type isEqualToString:@"image"]){
+//        return [ImageMessageCell cellHeight:chat];
+        return 0;
+    }else {
+//        return [TimeCell cellHeight:chat];
+        return 0;
     }
 }
 
