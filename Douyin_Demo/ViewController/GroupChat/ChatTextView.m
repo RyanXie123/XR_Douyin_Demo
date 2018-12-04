@@ -15,7 +15,7 @@ static const CGFloat kChatTextViewRightInset = 85;
 static const CGFloat kChatTextViewTopBottomInset = 15;
 
 
-@interface ChatTextView ()
+@interface ChatTextView ()<UITextViewDelegate>
 @property (nonatomic, assign) CGFloat  keyboardHeight; //键盘高度
 @property (nonatomic, assign) CGFloat textHeight; //文字高度
 
@@ -139,6 +139,22 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
     } completion:^(BOOL finished) {
         
     }];
+    
+    
+}
+
+
+#pragma mark - UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView {
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc]initWithAttributedString:textView.attributedText];
+    if (!textView.hasText) {
+        _placeholderLabel.hidden = NO;
+        _textHeight = ceilf(_textView.font.lineHeight);
+    }else {
+        _placeholderLabel.hidden = YES;
+        _textHeight = [attributedStr multiLineSize:ScreenWidth - kChatTextViewLeftInset - kChatTextViewRightInset].height;
+    }
+    [self updateContainerFrame];
     
     
 }
