@@ -233,7 +233,7 @@
         NSData *data = [self dataFromMemoryCache:key];
         if (!data) {
             //从硬盘读取缓存
-            [self dataFromDiskCache:key extension:extension];
+            data =  [self dataFromDiskCache:key extension:extension];
         }
         
         if (data) {

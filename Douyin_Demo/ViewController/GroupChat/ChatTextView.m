@@ -17,7 +17,7 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
 
 @interface ChatTextView ()
 @property (nonatomic, assign) CGFloat  keyboardHeight; //键盘高度
-@property (nonatomic, assign) CGFloat textViewHeight; //textView高度
+@property (nonatomic, assign) CGFloat textHeight; //文字高度
 
 
 @property (nonatomic, strong) UILabel *placeholderLabel;
@@ -39,6 +39,11 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
+        self.backgroundColor = ColorClear;
+        
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleGesture:)];
+        [self addGestureRecognizer:tapGestureRecognizer];
+        
         _container = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight, ScreenWidth, 0)];
         _container.backgroundColor = ColorThemeGrayDark;
         [self addSubview:_container];
@@ -56,7 +61,8 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
         _textView.textContainer.lineBreakMode = NSLineBreakByTruncatingTail; //省略号在末尾
         _textView.textContainerInset = UIEdgeInsetsMake(kChatTextViewTopBottomInset, kChatTextViewLeftInset, kChatTextViewTopBottomInset, kChatTextViewRightInset);
         _textView.textContainer.lineFragmentPadding = 0;
-        _textViewHeight = ceilf(_textView.font.lineHeight);
+        _textView.delegate = self;
+        _textHeight = ceilf(_textView.font.lineHeight);
         
         _placeholderLabel = [[UILabel alloc]init];
         _placeholderLabel.text = @"发送消息...";
@@ -64,10 +70,25 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
         _placeholderLabel.font = BigFont;
         _placeholderLabel.frame = CGRectMake(kChatTextViewLeftInset, 0, ScreenWidth - kChatTextViewLeftInset - kChatTextViewRightInset, 50);
         [_textView addSubview:_placeholderLabel];
-        
         [_container addSubview:_textView];
         
         
+        _emotionBtn = [[UIButton alloc]init];
+        [_emotionBtn setImage:[UIImage imageNamed:@"baseline_emotion_white"] forState:UIControlStateNormal];
+        [_emotionBtn setImage:[UIImage imageNamed:@"outline_keyboard_grey"] forState:UIControlStateSelected];
+        [_textView addSubview:_emotionBtn];
+        
+        _photoBtn = [[UIButton alloc] init];
+        
+        [_photoBtn setImage:[UIImage imageNamed:@"outline_photo_white"] forState:UIControlStateNormal];
+        [_photoBtn setImage:[UIImage imageNamed:@"outline_photo_red"] forState:UIControlStateSelected];
+        [_photoBtn addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)]];
+        [_textView addSubview:_photoBtn];
+        
+        
+        
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+//        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
         
         
     }
@@ -79,6 +100,9 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self updateContainerFrame];
+    
+    _photoBtn.frame = CGRectMake(ScreenWidth - 50, 0, 50, 50);
+    _emotionBtn.frame = CGRectMake(ScreenWidth - 85, 0, 50, 50);
 }
 
 
@@ -94,8 +118,17 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
     return hitView;
 }
 
+
+- (void)handleGesture:(UITapGestureRecognizer *)gesture {
+    CGPoint point = [gesture locationInView:_container];
+    if (![_container.layer containsPoint:point]) {//点击不在输入View内，隐藏键盘
+        [self hideKeyboard];
+    }
+}
+
 - (void)updateContainerFrame {
-    CGFloat textViewHeight = _keyboardHeight > SafeAreaBottomHeight ? 0: BigFont.lineHeight + 2 * kChatTextViewTopBottomInset;
+    
+    CGFloat textViewHeight = _keyboardHeight > SafeAreaBottomHeight ? _textHeight + 2 * kChatTextViewTopBottomInset: BigFont.lineHeight + 2 * kChatTextViewTopBottomInset;
     _textView.frame = CGRectMake(0, 0, ScreenWidth, textViewHeight);
     
     [UIView animateWithDuration:0.25f delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -109,6 +142,32 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
     
     
 }
+
+#pragma mark - KeyboardNotification
+
+- (void)keyboardWillShow:(NSNotification *)notificatoin {
+    _editMessageType = ChatEditMessageTypeText;
+    NSDictionary *userInfo = [notificatoin userInfo];
+    CGFloat keyBoardHeight = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+
+    self.keyboardHeight = keyBoardHeight;
+    [self updateContainerFrame];
+    
+    
+}
+
+
+- (void)hideKeyboard {
+    _editMessageType = ChatEditMessageTypeNone;
+    self.keyboardHeight = SafeAreaBottomHeight;
+    [self updateContainerFrame];
+    [_textView resignFirstResponder];
+}
+
+
+
+
+
 
 - (void)show {
     UIView *window = [[[UIApplication sharedApplication]delegate]window];

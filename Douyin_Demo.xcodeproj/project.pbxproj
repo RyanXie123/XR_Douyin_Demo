@@ -25,8 +25,10 @@
 		CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECC21ABD83F008211B4 /* TextMessageCell.m */; };
 		CF69FED021ABD8CA008211B4 /* GroupChat.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECF21ABD8CA008211B4 /* GroupChat.m */; };
 		CF6D154521B4D751007F9718 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D154421B4D751007F9718 /* UIImageView+WebCache.m */; };
+		CF8E0F9621B648ED00B1CB17 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E0F9521B648ED00B1CB17 /* CircleProgressView.m */; };
 		CFC4E7D821AFC49F0000098F /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */; };
 		CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */; };
+		CFE3F8A421B6295B00428DF3 /* ImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3F8A321B6295B00428DF3 /* ImageMessageCell.m */; };
 		CFE86EFE21A80CAB0066FC91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86EFD21A80CAB0066FC91 /* AppDelegate.m */; };
 		CFE86F0121A80CAC0066FC91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86F0021A80CAC0066FC91 /* ViewController.m */; };
 		CFE86F0421A80CAC0066FC91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE86F0221A80CAC0066FC91 /* Main.storyboard */; };
@@ -76,10 +78,14 @@
 		CF69FECF21ABD8CA008211B4 /* GroupChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChat.m; sourceTree = "<group>"; };
 		CF6D154321B4D751007F9718 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		CF6D154421B4D751007F9718 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		CF8E0F9421B648ED00B1CB17 /* CircleProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		CF8E0F9521B648ED00B1CB17 /* CircleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		CFC4E7D621AFC49F0000098F /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		CFC4E7D921AFCA740000098F /* WebCacheHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebCacheHelper.h; sourceTree = "<group>"; };
 		CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebCacheHelper.m; sourceTree = "<group>"; };
+		CFE3F8A221B6295B00428DF3 /* ImageMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMessageCell.h; sourceTree = "<group>"; };
+		CFE3F8A321B6295B00428DF3 /* ImageMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageMessageCell.m; sourceTree = "<group>"; };
 		CFE86EF921A80CAB0066FC91 /* Douyin_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Douyin_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE86EFC21A80CAB0066FC91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFE86EFD21A80CAB0066FC91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +171,8 @@
 				CF69FEC621ABD1DA008211B4 /* GroupChat */,
 				CF50221221B50A29008AC826 /* RefreshControl.h */,
 				CF50221321B50A29008AC826 /* RefreshControl.m */,
+				CF8E0F9421B648ED00B1CB17 /* CircleProgressView.h */,
+				CF8E0F9521B648ED00B1CB17 /* CircleProgressView.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -180,6 +188,8 @@
 				CF5E893C21AD217E004814D8 /* BaseMessageCell.m */,
 				CF50221521B51E50008AC826 /* ChatTextView.h */,
 				CF50221621B51E50008AC826 /* ChatTextView.m */,
+				CFE3F8A221B6295B00428DF3 /* ImageMessageCell.h */,
+				CFE3F8A321B6295B00428DF3 /* ImageMessageCell.m */,
 			);
 			path = GroupChat;
 			sourceTree = "<group>";
@@ -389,6 +399,7 @@
 				CF6D154521B4D751007F9718 /* UIImageView+WebCache.m in Sources */,
 				CFF48E8821A9046B00181F85 /* NetworkHelper.m in Sources */,
 				CFF48E9621A936C000181F85 /* UIWindow+Extension.m in Sources */,
+				CF8E0F9621B648ED00B1CB17 /* CircleProgressView.m in Sources */,
 				CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */,
 				CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */,
 				CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */,
@@ -400,6 +411,7 @@
 				CFC4E7D821AFC49F0000098F /* UIImage+Extension.m in Sources */,
 				CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */,
 				CFE86F0121A80CAC0066FC91 /* ViewController.m in Sources */,
+				CFE3F8A421B6295B00428DF3 /* ImageMessageCell.m in Sources */,
 				CFE86F0C21A80CAC0066FC91 /* main.m in Sources */,
 				CF69FEC921ABD20B008211B4 /* ChatListController.m in Sources */,
 				CF69FEB621ABA3B5008211B4 /* BaseResponse.m in Sources */,

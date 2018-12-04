@@ -9,6 +9,7 @@
 #import "ChatListController.h"
 #import "NetworkHelper.h"
 #import "TextMessageCell.h"
+#import "ImageMessageCell.h"
 #import "Visitor.h"
 #import "RefreshControl.h"
 #import "ChatTextView.h"
@@ -49,6 +50,7 @@
     }
     
     [_tableView registerClass:[TextMessageCell class] forCellReuseIdentifier:NSStringFromClass(TextMessageCell.class)];
+    [_tableView registerClass:[ImageMessageCell class] forCellReuseIdentifier:NSStringFromClass(ImageMessageCell.class)];
     [self.view addSubview:_tableView];
 
     
@@ -111,7 +113,7 @@
     
     NSMutableArray <GroupChat *> *tempArray = [NSMutableArray array];
     for (GroupChat *chat in data) {
-        if ([chat.msg_type isEqualToString:@"text"]) {
+        if ([chat.msg_type isEqualToString:@"text"] || [chat.msg_type isEqualToString:@"image"]) {
             chat.cellAttributedString = [self cellAttributedString:chat];
             chat.contentSize = [self cellContentSize:chat];
             chat.cellHeight = [self cellHeight:chat];
@@ -126,6 +128,7 @@
 
 - (void)onChatViewHeightChange:(CGFloat)height {
     _tableView.contentInset = UIEdgeInsetsMake(0, 0, height, 0);
+    [self scrollToBottom];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -145,20 +148,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GroupChat *chat = _data[indexPath.row];
-//    if ([chat.msg_type isEqualToString:@"text"]) {
-    TextMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(TextMessageCell.class) forIndexPath:indexPath];
-    
-    [cell initData:chat];
-    
-    
-    
+    if ([chat.msg_type isEqualToString:@"text"]) {
+        TextMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(TextMessageCell.class) forIndexPath:indexPath];
+        [cell initData:chat];
         return cell;
+    }else {
+        ImageMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ImageMessageCell.class) forIndexPath:indexPath];
+        [cell initData:chat];
+        return cell;
+    }
+    
+    
+    
+    
 //    }
 }
 
 
 - (void)scrollToBottom {
-    if (self.data > 0) {
+    if (self.data.count > 0) {
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.data.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     }
 }
@@ -186,7 +194,7 @@
     }else if([chat.msg_type isEqualToString:@"text"]){
         return [TextMessageCell contentSize:chat];
     }else  if([chat.msg_type isEqualToString:@"image"]){
-//        return [ImageMessageCell contentSize:chat];
+        return [ImageMessageCell contentSize:chat];
         return CGSizeZero;
     }else {
 //        return [TimeCell contentSize:chat];
@@ -201,8 +209,7 @@
     }else if([chat.msg_type isEqualToString:@"text"]){
         return [TextMessageCell cellHeight:chat];
     }else  if([chat.msg_type isEqualToString:@"image"]){
-//        return [ImageMessageCell cellHeight:chat];
-        return 0;
+        return [ImageMessageCell cellHeight:chat];
     }else {
 //        return [TimeCell cellHeight:chat];
         return 0;

@@ -38,6 +38,26 @@
     
 }
 
+- (void)setImageWithURL:(NSURL *)imageURL progressBlock:(WebImageProgressBlock)progressBlock completedBlcok:(WebImageCompletedBlock)completedBlock {
+    [self cancelOperation];
+    WebCombineOperation *operation = [[WebDownloader sharedDownloader]downloadWithURL:imageURL progressBlock:^(NSInteger reveivedSize, NSInteger expectedSize) {
+        NSString *percentStr = [NSString stringWithFormat:@"%.1f",(CGFloat)reveivedSize/(CGFloat)expectedSize];
+        CGFloat percent = [percentStr floatValue];
+        dispatch_main_async_safe(^{
+            progressBlock(percent);
+        });
+    } completedBlock:^(NSData *data, NSError *error, BOOL finished) {
+        UIImage *image = [[UIImage alloc]initWithData:data];
+        dispatch_main_async_safe(^{
+            completedBlock(image,error);
+        });
+    } cancelBlock:^{
+        
+    }];
+    objc_setAssociatedObject(self, &loadOperationKey, operation, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+
 - (void)cancelOperation {
     WebCombineOperation *operation = objc_getAssociatedObject(self, &loadOperationKey);
     if (operation) {
