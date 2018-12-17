@@ -23,6 +23,8 @@
 @property (nonatomic, assign) NSInteger pageSize;
 @property (nonatomic, strong) Visitor *visitor;
 
+
+
 @end
 
 @implementation ChatListController

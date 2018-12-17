@@ -25,6 +25,8 @@
 		CF69FECD21ABD83F008211B4 /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECC21ABD83F008211B4 /* TextMessageCell.m */; };
 		CF69FED021ABD8CA008211B4 /* GroupChat.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FECF21ABD8CA008211B4 /* GroupChat.m */; };
 		CF6D154521B4D751007F9718 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D154421B4D751007F9718 /* UIImageView+WebCache.m */; };
+		CF73BE2221B7B866002A4EFC /* EmotionSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CF73BE2121B7B866002A4EFC /* EmotionSelector.m */; };
+		CF73BE2421B7B9D4002A4EFC /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF73BE2321B7B9D4002A4EFC /* Emoticons.bundle */; };
 		CF8E0F9621B648ED00B1CB17 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E0F9521B648ED00B1CB17 /* CircleProgressView.m */; };
 		CFC4E7D821AFC49F0000098F /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */; };
 		CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */; };
@@ -78,6 +80,9 @@
 		CF69FECF21ABD8CA008211B4 /* GroupChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChat.m; sourceTree = "<group>"; };
 		CF6D154321B4D751007F9718 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		CF6D154421B4D751007F9718 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		CF73BE2021B7B866002A4EFC /* EmotionSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmotionSelector.h; sourceTree = "<group>"; };
+		CF73BE2121B7B866002A4EFC /* EmotionSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmotionSelector.m; sourceTree = "<group>"; };
+		CF73BE2321B7B9D4002A4EFC /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		CF8E0F9421B648ED00B1CB17 /* CircleProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
 		CF8E0F9521B648ED00B1CB17 /* CircleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		CFC4E7D621AFC49F0000098F /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -190,6 +195,8 @@
 				CF50221621B51E50008AC826 /* ChatTextView.m */,
 				CFE3F8A221B6295B00428DF3 /* ImageMessageCell.h */,
 				CFE3F8A321B6295B00428DF3 /* ImageMessageCell.m */,
+				CF73BE2021B7B866002A4EFC /* EmotionSelector.h */,
+				CF73BE2121B7B866002A4EFC /* EmotionSelector.m */,
 			);
 			path = GroupChat;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE86F0521A80CAC0066FC91 /* Assets.xcassets */,
+				CF73BE2321B7B9D4002A4EFC /* Emoticons.bundle */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -361,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE86F0921A80CAC0066FC91 /* LaunchScreen.storyboard in Resources */,
+				CF73BE2421B7B9D4002A4EFC /* Emoticons.bundle in Resources */,
 				CFE86F0621A80CAC0066FC91 /* Assets.xcassets in Resources */,
 				CFE86F0421A80CAC0066FC91 /* Main.storyboard in Resources */,
 			);
@@ -405,6 +414,7 @@
 				CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */,
 				CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */,
 				CF50221421B50A29008AC826 /* RefreshControl.m in Sources */,
+				CF73BE2221B7B866002A4EFC /* EmotionSelector.m in Sources */,
 				CFF48E8C21A905BB00181F85 /* BaseViewController.m in Sources */,
 				CF50221721B51E50008AC826 /* ChatTextView.m in Sources */,
 				CF69FEBB21ABA6C6008211B4 /* BaseModel.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import "ChatTextView.h"
 #import "Constants.h"
-
+#import "EmotionSelector.h"
 
 static const CGFloat kChatTextViewLeftInset = 15;
 static const CGFloat kChatTextViewRightInset = 85;
@@ -24,6 +24,8 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
 @property (nonatomic, strong) UIButton *emotionBtn;
 @property (nonatomic, strong) UIButton *photoBtn;
 @property (nonatomic, strong) UIVisualEffectView *visualEffectView;
+
+@property (nonatomic, strong) EmotionSelector *emotionSelector;
 
 @end
 
@@ -86,7 +88,7 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
         [_textView addSubview:_photoBtn];
         
         
-        
+        [self addObserver:self forKeyPath:@"keyboardHeight" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 //        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
         
@@ -104,6 +106,29 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
     _photoBtn.frame = CGRectMake(ScreenWidth - 50, 0, 50, 50);
     _emotionBtn.frame = CGRectMake(ScreenWidth - 85, 0, 50, 50);
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"keyboardHeight"]) {
+        if (_keyboardHeight == SafeAreaBottomHeight) {
+            _textView.textColor = ColorWhite;
+            _container.backgroundColor = ColorThemeGrayDark;
+            
+            [_emotionBtn setImage:[UIImage imageNamed:@"baseline_emotion_white"] forState:UIControlStateNormal];
+            [_photoBtn setImage:[UIImage imageNamed:@"outline_photo_white"] forState:UIControlStateNormal];
+        }else {
+            
+            _textView.textColor = ColorBlack;
+            _container.backgroundColor = ColorWhite;
+            
+            
+            [_emotionBtn setImage:[UIImage imageNamed:@"baseline_emotion_grey"] forState:UIControlStateNormal];
+            [_photoBtn setImage:[UIImage imageNamed:@"outline_photo_grey"] forState:UIControlStateNormal];
+        }
+    }else {
+        return [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
 
 
 
@@ -190,4 +215,13 @@ static const CGFloat kChatTextViewTopBottomInset = 15;
     [window addSubview:self];
 }
 
+
+
+
+- (EmotionSelector *)emotionSelector {
+    if (!_emotionSelector) {
+        _emotionSelector = [[EmotionSelector alloc]init];
+    }
+    return _emotionSelector;
+}
 @end
