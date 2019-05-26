@@ -179,7 +179,8 @@
     NSString *fileName = [self md5:key];
     NSString *cachePathForKey = [_diskCacheDirectoryURL URLByAppendingPathComponent:fileName].path;
     if (extension) {
-        [cachePathForKey stringByAppendingPathExtension:extension];
+        cachePathForKey = [cachePathForKey stringByAppendingFormat:@".%@",extension];
+        
     }
     return cachePathForKey;
     
@@ -251,12 +252,16 @@
     
     NSLog(@"下载任务启动 线程: %@",[NSThread currentThread]);
     
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    config.timeoutIntervalForRequest = 15;
-    _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     
-    _dataTask = [_session dataTaskWithRequest:_request];
-    [_dataTask resume];
+    @synchronized (self) {
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        config.timeoutIntervalForRequest = 15;
+        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+        
+        _dataTask = [_session dataTaskWithRequest:_request];
+        [_dataTask resume];
+    }
+    
 }
 
 - (void)done {

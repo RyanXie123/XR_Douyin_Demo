@@ -12,6 +12,14 @@
 		CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF21EC2A21ACEBEF002B83D6 /* GroupChatListResponse.m */; };
 		CF32EFAD2299397800ED21FA /* WebCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFAC2299397800ED21FA /* WebCacheHelper.m */; };
 		CF32EFB1229944A800ED21FA /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFB0229944A800ED21FA /* NSDate+Extension.m */; };
+		CF32EFB4229A26F900ED21FA /* AVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFB3229A26F900ED21FA /* AVPlayerManager.m */; };
+		CF32EFB7229A2CB300ED21FA /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFB6229A2CB300ED21FA /* Video.m */; };
+		CF32EFBA229A2D3500ED21FA /* Aweme.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFB9229A2D3500ED21FA /* Aweme.m */; };
+		CF32EFBD229A2D5600ED21FA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFBC229A2D5600ED21FA /* User.m */; };
+		CF32EFC0229A2D8F00ED21FA /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFBF229A2D8F00ED21FA /* Music.m */; };
+		CF32EFC4229A2FC300ED21FA /* AwemeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFC3229A2FC300ED21FA /* AwemeListController.m */; };
+		CF32EFC7229A311500ED21FA /* AwemeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFC6229A311500ED21FA /* AwemeListCell.m */; };
+		CF32EFC9229A691000ED21FA /* awemes.json in Resources */ = {isa = PBXBuildFile; fileRef = CF32EFC8229A691000ED21FA /* awemes.json */; };
 		CF50221421B50A29008AC826 /* RefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF50221321B50A29008AC826 /* RefreshControl.m */; };
 		CF50221721B51E50008AC826 /* ChatTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF50221621B51E50008AC826 /* ChatTextView.m */; };
 		CF5950AF2296A04100CFE0DD /* AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5950AE2296A04100CFE0DD /* AVPlayerView.m */; };
@@ -57,6 +65,21 @@
 		CF32EFAE2299438C00ED21FA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Douyin_Demo/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		CF32EFAF229944A800ED21FA /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		CF32EFB0229944A800ED21FA /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		CF32EFB2229A26F900ED21FA /* AVPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerManager.h; sourceTree = "<group>"; };
+		CF32EFB3229A26F900ED21FA /* AVPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerManager.m; sourceTree = "<group>"; };
+		CF32EFB5229A2CB300ED21FA /* Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		CF32EFB6229A2CB300ED21FA /* Video.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		CF32EFB8229A2D3500ED21FA /* Aweme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aweme.h; sourceTree = "<group>"; };
+		CF32EFB9229A2D3500ED21FA /* Aweme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aweme.m; sourceTree = "<group>"; };
+		CF32EFBB229A2D5600ED21FA /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		CF32EFBC229A2D5600ED21FA /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		CF32EFBE229A2D8F00ED21FA /* Music.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
+		CF32EFBF229A2D8F00ED21FA /* Music.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Music.m; sourceTree = "<group>"; };
+		CF32EFC2229A2FC300ED21FA /* AwemeListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListController.h; sourceTree = "<group>"; };
+		CF32EFC3229A2FC300ED21FA /* AwemeListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListController.m; sourceTree = "<group>"; };
+		CF32EFC5229A311500ED21FA /* AwemeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListCell.h; sourceTree = "<group>"; };
+		CF32EFC6229A311500ED21FA /* AwemeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListCell.m; sourceTree = "<group>"; };
+		CF32EFC8229A691000ED21FA /* awemes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awemes.json; sourceTree = "<group>"; };
 		CF50221221B50A29008AC826 /* RefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshControl.h; sourceTree = "<group>"; };
 		CF50221321B50A29008AC826 /* RefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshControl.m; sourceTree = "<group>"; };
 		CF50221521B51E50008AC826 /* ChatTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextView.h; sourceTree = "<group>"; };
@@ -148,10 +171,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CF5950AB22969FDA00CFE0DD /* AwemeList */ = {
+		CF32EFC1229A2F2900ED21FA /* AwemeList */ = {
 			isa = PBXGroup;
 			children = (
 				CF5950AC22969FE900CFE0DD /* AVPlayer */,
+				CF32EFC2229A2FC300ED21FA /* AwemeListController.h */,
+				CF32EFC3229A2FC300ED21FA /* AwemeListController.m */,
+				CF32EFC5229A311500ED21FA /* AwemeListCell.h */,
+				CF32EFC6229A311500ED21FA /* AwemeListCell.m */,
+			);
+			path = AwemeList;
+			sourceTree = "<group>";
+		};
+		CF5950AB22969FDA00CFE0DD /* AwemeList */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = AwemeList;
 			sourceTree = "<group>";
@@ -161,6 +195,8 @@
 			children = (
 				CF5950AD2296A04100CFE0DD /* AVPlayerView.h */,
 				CF5950AE2296A04100CFE0DD /* AVPlayerView.m */,
+				CF32EFB2229A26F900ED21FA /* AVPlayerManager.h */,
+				CF32EFB3229A26F900ED21FA /* AVPlayerManager.m */,
 			);
 			path = AVPlayer;
 			sourceTree = "<group>";
@@ -189,6 +225,14 @@
 				CF69FEC021ABA75C008211B4 /* PictureInfo.m */,
 				CF69FECE21ABD8CA008211B4 /* GroupChat.h */,
 				CF69FECF21ABD8CA008211B4 /* GroupChat.m */,
+				CF32EFB5229A2CB300ED21FA /* Video.h */,
+				CF32EFB6229A2CB300ED21FA /* Video.m */,
+				CF32EFB8229A2D3500ED21FA /* Aweme.h */,
+				CF32EFB9229A2D3500ED21FA /* Aweme.m */,
+				CF32EFBB229A2D5600ED21FA /* User.h */,
+				CF32EFBC229A2D5600ED21FA /* User.m */,
+				CF32EFBE229A2D8F00ED21FA /* Music.h */,
+				CF32EFBF229A2D8F00ED21FA /* Music.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -196,6 +240,7 @@
 		CF69FEC521ABD174008211B4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CF32EFC1229A2F2900ED21FA /* AwemeList */,
 				CF69FEC621ABD1DA008211B4 /* GroupChat */,
 				CF50221221B50A29008AC826 /* RefreshControl.h */,
 				CF50221321B50A29008AC826 /* RefreshControl.m */,
@@ -254,6 +299,7 @@
 		CFE86EFB21A80CAB0066FC91 /* Douyin_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				CF32EFC8229A691000ED21FA /* awemes.json */,
 				CF32EFAE2299438C00ED21FA /* PrefixHeader.pch */,
 				CF69FECA21ABD4D5008211B4 /* resource */,
 				CF69FEC521ABD174008211B4 /* ViewController */,
@@ -395,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE86F0921A80CAC0066FC91 /* LaunchScreen.storyboard in Resources */,
+				CF32EFC9229A691000ED21FA /* awemes.json in Resources */,
 				CF73BE2421B7B9D4002A4EFC /* Emoticons.bundle in Resources */,
 				CFE86F0621A80CAC0066FC91 /* Assets.xcassets in Resources */,
 				CFE86F0421A80CAC0066FC91 /* Main.storyboard in Resources */,
@@ -432,17 +479,21 @@
 				CF69FEC121ABA75C008211B4 /* PictureInfo.m in Sources */,
 				CF5E894021AD249F004814D8 /* NSMutableAttributedString+Extension.m in Sources */,
 				CF6D154521B4D751007F9718 /* UIImageView+WebCache.m in Sources */,
+				CF32EFC7229A311500ED21FA /* AwemeListCell.m in Sources */,
 				CF32EFAD2299397800ED21FA /* WebCacheHelper.m in Sources */,
 				CFF48E8821A9046B00181F85 /* NetworkHelper.m in Sources */,
+				CF32EFC4229A2FC300ED21FA /* AwemeListController.m in Sources */,
 				CF5950AF2296A04100CFE0DD /* AVPlayerView.m in Sources */,
 				CFF48E9621A936C000181F85 /* UIWindow+Extension.m in Sources */,
 				CF8E0F9621B648ED00B1CB17 /* CircleProgressView.m in Sources */,
 				CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */,
 				CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */,
 				CF32EFB1229944A800ED21FA /* NSDate+Extension.m in Sources */,
+				CF32EFB4229A26F900ED21FA /* AVPlayerManager.m in Sources */,
 				CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */,
 				CF50221421B50A29008AC826 /* RefreshControl.m in Sources */,
 				CF73BE2221B7B866002A4EFC /* EmotionSelector.m in Sources */,
+				CF32EFBD229A2D5600ED21FA /* User.m in Sources */,
 				CFF48E8C21A905BB00181F85 /* BaseViewController.m in Sources */,
 				CF50221721B51E50008AC826 /* ChatTextView.m in Sources */,
 				CF69FEBB21ABA6C6008211B4 /* BaseModel.m in Sources */,
@@ -454,10 +505,13 @@
 				CF69FEC921ABD20B008211B4 /* ChatListController.m in Sources */,
 				CF69FEB621ABA3B5008211B4 /* BaseResponse.m in Sources */,
 				CFF48E9221A92DAE00181F85 /* BaseRequest.m in Sources */,
+				CF32EFC0229A2D8F00ED21FA /* Music.m in Sources */,
 				CF69FEBE21ABA70D008211B4 /* Visitor.m in Sources */,
+				CF32EFBA229A2D3500ED21FA /* Aweme.m in Sources */,
 				CF69FED021ABD8CA008211B4 /* GroupChat.m in Sources */,
 				CF5E893D21AD217E004814D8 /* BaseMessageCell.m in Sources */,
 				CFE86EFE21A80CAB0066FC91 /* AppDelegate.m in Sources */,
+				CF32EFB7229A2CB300ED21FA /* Video.m in Sources */,
 				CF69FEB321AB9F29008211B4 /* VisitorRequest.m in Sources */,
 				CF69FEB021AB95F0008211B4 /* NSString+Extension.m in Sources */,
 			);

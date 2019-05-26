@@ -10,6 +10,9 @@
 #import "ViewController.h"
 #import "ChatListController.h"
 #import "NetworkHelper.h"
+#import "AVPlayerManager.h"
+#import "AwemeListController.h"
+#import "Aweme.h"
 @interface AppDelegate ()
 
 @end
@@ -21,10 +24,22 @@
     // Override point for customization after application launch.
     
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    _window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[ChatListController new]];
+    
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"awemes" ofType:@"json"];
+    NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSArray *array = dic[@"data"];
+   
+    NSMutableArray *arrayM = [Aweme arrayOfModelsFromDictionaries:array].mutableCopy;
+    
+    AwemeListController *controller = [[AwemeListController alloc]initWithVideoData:arrayM currentIndex:0 pageIndex:1 pageSize:1 awemeType:AwemeWork uid:@"12"];
+    
+    
+    _window.rootViewController = [[UINavigationController alloc]initWithRootViewController:controller];
     [_window makeKeyAndVisible];
     [NetworkHelper startListening];
-    
+    [AVPlayerManager setAudioMode];
     
     
     return YES;
