@@ -7,12 +7,13 @@
 //
 
 #import "UIImageView+WebCache.h"
-#import "Constants.h"
+
 #import <objc/runtime.h>
 @implementation UIImageView (WebCache)
 - (void)setImageWithURL:(NSURL *)imageURL {
     [self cancelOperation];
-    WebCombineOperation *operation = [[WebDownloader sharedDownloader]downloadWithURL:imageURL progressBlock:nil completedBlock:^(NSData *data, NSError *error, BOOL finished) {
+    
+    WebCombineOperation *operation = [[WebDownloader sharedDownloader]downloadWithUrl:imageURL progressBlock:nil completedBlock:^(NSData *data, NSError *error, BOOL finished) {
         UIImage *image = [[UIImage alloc]initWithData:data];
         __weak typeof(self) weakSelf;
         dispatch_main_async_safe(^{
@@ -26,10 +27,13 @@
 
 - (void)setImageWithURL:(NSURL *)imageURL completedBlock:(WebImageCompletedBlock)completedBlock {
     [self cancelOperation];
+
     
-    WebCombineOperation *operation = [[WebDownloader sharedDownloader]downloadWithURL:imageURL progressBlock:nil completedBlock:^(NSData *data, NSError *error, BOOL finished) {
+    WebCombineOperation *operation = [[WebDownloader sharedDownloader]downloadWithUrl:imageURL progressBlock:nil completedBlock:^(NSData *data, NSError *error, BOOL finished) {
         UIImage *image = [[UIImage alloc]initWithData:data];
+        __weak typeof(self) weakSelf;
         dispatch_main_async_safe(^{
+            weakSelf.image = image;
             completedBlock(image,error);
         });
     } cancelBlock:nil];
@@ -40,8 +44,8 @@
 
 - (void)setImageWithURL:(NSURL *)imageURL progressBlock:(WebImageProgressBlock)progressBlock completedBlcok:(WebImageCompletedBlock)completedBlock {
     [self cancelOperation];
-    WebCombineOperation *operation = [[WebDownloader sharedDownloader]downloadWithURL:imageURL progressBlock:^(NSInteger reveivedSize, NSInteger expectedSize) {
-        NSString *percentStr = [NSString stringWithFormat:@"%.1f",(CGFloat)reveivedSize/(CGFloat)expectedSize];
+    WebCombineOperation *operation =  [[WebDownloader sharedDownloader]downloadWithUrl:imageURL progressBlock:^(NSInteger receivedSize, NSInteger expectedSize, NSData *data) {
+        NSString *percentStr = [NSString stringWithFormat:@"%.1f",(CGFloat)receivedSize/(CGFloat)expectedSize];
         CGFloat percent = [percentStr floatValue];
         dispatch_main_async_safe(^{
             progressBlock(percent);

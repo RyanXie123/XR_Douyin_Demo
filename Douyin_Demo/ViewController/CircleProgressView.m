@@ -7,7 +7,7 @@
 //
 
 #import "CircleProgressView.h"
-#import "Constants.h"
+
 @interface CircleProgressView ()
 
 @property (nonatomic, strong) CAShapeLayer *progressLayer;

@@ -7,7 +7,7 @@
 //
 
 #import "ChatTextView.h"
-#import "Constants.h"
+
 #import "EmotionSelector.h"
 
 static const CGFloat kChatTextViewLeftInset = 15;

@@ -10,8 +10,11 @@
 		2F17984CB7E5B0CF7B01E6E1 /* libPods-Douyin_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8C82A8ED64854F3BCC79FF /* libPods-Douyin_Demo.a */; };
 		CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF21EC2421ACE87A002B83D6 /* GroupChatListRequest.m */; };
 		CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF21EC2A21ACEBEF002B83D6 /* GroupChatListResponse.m */; };
+		CF32EFAD2299397800ED21FA /* WebCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFAC2299397800ED21FA /* WebCacheHelper.m */; };
+		CF32EFB1229944A800ED21FA /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFB0229944A800ED21FA /* NSDate+Extension.m */; };
 		CF50221421B50A29008AC826 /* RefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF50221321B50A29008AC826 /* RefreshControl.m */; };
 		CF50221721B51E50008AC826 /* ChatTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF50221621B51E50008AC826 /* ChatTextView.m */; };
+		CF5950AF2296A04100CFE0DD /* AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5950AE2296A04100CFE0DD /* AVPlayerView.m */; };
 		CF5E893D21AD217E004814D8 /* BaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E893C21AD217E004814D8 /* BaseMessageCell.m */; };
 		CF5E894021AD249F004814D8 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E893F21AD249F004814D8 /* NSMutableAttributedString+Extension.m */; };
 		CF69FEB021AB95F0008211B4 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69FEAF21AB95F0008211B4 /* NSString+Extension.m */; };
@@ -29,7 +32,6 @@
 		CF73BE2421B7B9D4002A4EFC /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF73BE2321B7B9D4002A4EFC /* Emoticons.bundle */; };
 		CF8E0F9621B648ED00B1CB17 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8E0F9521B648ED00B1CB17 /* CircleProgressView.m */; };
 		CFC4E7D821AFC49F0000098F /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */; };
-		CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */; };
 		CFE3F8A421B6295B00428DF3 /* ImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE3F8A321B6295B00428DF3 /* ImageMessageCell.m */; };
 		CFE86EFE21A80CAB0066FC91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86EFD21A80CAB0066FC91 /* AppDelegate.m */; };
 		CFE86F0121A80CAC0066FC91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE86F0021A80CAC0066FC91 /* ViewController.m */; };
@@ -50,10 +52,17 @@
 		CF21EC2421ACE87A002B83D6 /* GroupChatListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChatListRequest.m; sourceTree = "<group>"; };
 		CF21EC2921ACEBEF002B83D6 /* GroupChatListResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChatListResponse.h; sourceTree = "<group>"; };
 		CF21EC2A21ACEBEF002B83D6 /* GroupChatListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChatListResponse.m; sourceTree = "<group>"; };
+		CF32EFAB2299397700ED21FA /* WebCacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCacheHelper.h; sourceTree = "<group>"; };
+		CF32EFAC2299397800ED21FA /* WebCacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebCacheHelper.m; sourceTree = "<group>"; };
+		CF32EFAE2299438C00ED21FA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Douyin_Demo/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		CF32EFAF229944A800ED21FA /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		CF32EFB0229944A800ED21FA /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		CF50221221B50A29008AC826 /* RefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshControl.h; sourceTree = "<group>"; };
 		CF50221321B50A29008AC826 /* RefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshControl.m; sourceTree = "<group>"; };
 		CF50221521B51E50008AC826 /* ChatTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextView.h; sourceTree = "<group>"; };
 		CF50221621B51E50008AC826 /* ChatTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTextView.m; sourceTree = "<group>"; };
+		CF5950AD2296A04100CFE0DD /* AVPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerView.h; sourceTree = "<group>"; };
+		CF5950AE2296A04100CFE0DD /* AVPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerView.m; sourceTree = "<group>"; };
 		CF5E893B21AD217E004814D8 /* BaseMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMessageCell.h; sourceTree = "<group>"; };
 		CF5E893C21AD217E004814D8 /* BaseMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMessageCell.m; sourceTree = "<group>"; };
 		CF5E893E21AD249F004814D8 /* NSMutableAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Extension.h"; sourceTree = "<group>"; };
@@ -87,8 +96,6 @@
 		CF8E0F9521B648ED00B1CB17 /* CircleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		CFC4E7D621AFC49F0000098F /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		CFC4E7D921AFCA740000098F /* WebCacheHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebCacheHelper.h; sourceTree = "<group>"; };
-		CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebCacheHelper.m; sourceTree = "<group>"; };
 		CFE3F8A221B6295B00428DF3 /* ImageMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMessageCell.h; sourceTree = "<group>"; };
 		CFE3F8A321B6295B00428DF3 /* ImageMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageMessageCell.m; sourceTree = "<group>"; };
 		CFE86EF921A80CAB0066FC91 /* Douyin_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Douyin_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +112,6 @@
 		CFF48E8721A9046B00181F85 /* NetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
 		CFF48E8A21A905BB00181F85 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CFF48E8B21A905BB00181F85 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		CFF48E8E21A909BA00181F85 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		CFF48E9021A92DAE00181F85 /* BaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
 		CFF48E9121A92DAE00181F85 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 		CFF48E9421A936C000181F85 /* UIWindow+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
@@ -140,6 +146,23 @@
 				805280F1A91483F770059953 /* Pods-Douyin_Demo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF5950AB22969FDA00CFE0DD /* AwemeList */ = {
+			isa = PBXGroup;
+			children = (
+				CF5950AC22969FE900CFE0DD /* AVPlayer */,
+			);
+			path = AwemeList;
+			sourceTree = "<group>";
+		};
+		CF5950AC22969FE900CFE0DD /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CF5950AD2296A04100CFE0DD /* AVPlayerView.h */,
+				CF5950AE2296A04100CFE0DD /* AVPlayerView.m */,
+			);
+			path = AVPlayer;
 			sourceTree = "<group>";
 		};
 		CF69FEB721ABA3BD008211B4 /* HttpResponse */ = {
@@ -231,6 +254,7 @@
 		CFE86EFB21A80CAB0066FC91 /* Douyin_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				CF32EFAE2299438C00ED21FA /* PrefixHeader.pch */,
 				CF69FECA21ABD4D5008211B4 /* resource */,
 				CF69FEC521ABD174008211B4 /* ViewController */,
 				CF69FEB821ABA491008211B4 /* Entity */,
@@ -257,8 +281,8 @@
 				CFF48E8F21A92D8A00181F85 /* HttpRequest */,
 				CFF48E8621A9046B00181F85 /* NetworkHelper.h */,
 				CFF48E8721A9046B00181F85 /* NetworkHelper.m */,
-				CFC4E7D921AFCA740000098F /* WebCacheHelper.h */,
-				CFC4E7DA21AFCA740000098F /* WebCacheHelper.m */,
+				CF32EFAB2299397700ED21FA /* WebCacheHelper.h */,
+				CF32EFAC2299397800ED21FA /* WebCacheHelper.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -266,6 +290,7 @@
 		CFF48E8921A9059900181F85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF5950AB22969FDA00CFE0DD /* AwemeList */,
 				CFF48E8A21A905BB00181F85 /* BaseViewController.h */,
 				CFF48E8B21A905BB00181F85 /* BaseViewController.m */,
 			);
@@ -275,7 +300,6 @@
 		CFF48E8D21A9099B00181F85 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				CFF48E8E21A909BA00181F85 /* Constants.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -306,6 +330,8 @@
 				CFC4E7D721AFC49F0000098F /* UIImage+Extension.m */,
 				CF6D154321B4D751007F9718 /* UIImageView+WebCache.h */,
 				CF6D154421B4D751007F9718 /* UIImageView+WebCache.m */,
+				CF32EFAF229944A800ED21FA /* NSDate+Extension.h */,
+				CF32EFB0229944A800ED21FA /* NSDate+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -406,13 +432,15 @@
 				CF69FEC121ABA75C008211B4 /* PictureInfo.m in Sources */,
 				CF5E894021AD249F004814D8 /* NSMutableAttributedString+Extension.m in Sources */,
 				CF6D154521B4D751007F9718 /* UIImageView+WebCache.m in Sources */,
+				CF32EFAD2299397800ED21FA /* WebCacheHelper.m in Sources */,
 				CFF48E8821A9046B00181F85 /* NetworkHelper.m in Sources */,
+				CF5950AF2296A04100CFE0DD /* AVPlayerView.m in Sources */,
 				CFF48E9621A936C000181F85 /* UIWindow+Extension.m in Sources */,
 				CF8E0F9621B648ED00B1CB17 /* CircleProgressView.m in Sources */,
 				CF21EC2B21ACEBEF002B83D6 /* GroupChatListResponse.m in Sources */,
 				CF21EC2521ACE87A002B83D6 /* GroupChatListRequest.m in Sources */,
+				CF32EFB1229944A800ED21FA /* NSDate+Extension.m in Sources */,
 				CF69FEC421ABC7FF008211B4 /* VisitorResponse.m in Sources */,
-				CFC4E7DB21AFCA740000098F /* WebCacheHelper.m in Sources */,
 				CF50221421B50A29008AC826 /* RefreshControl.m in Sources */,
 				CF73BE2221B7B866002A4EFC /* EmotionSelector.m in Sources */,
 				CFF48E8C21A905BB00181F85 /* BaseViewController.m in Sources */,
@@ -576,6 +604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WVSA339HRN;
+				GCC_PREFIX_HEADER = $SRCROOT/Douyin_Demo/PrefixHeader.pch;
 				INFOPLIST_FILE = Douyin_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -595,6 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WVSA339HRN;
+				GCC_PREFIX_HEADER = $SRCROOT/Douyin_Demo/PrefixHeader.pch;
 				INFOPLIST_FILE = Douyin_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

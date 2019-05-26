@@ -7,7 +7,7 @@
 //
 
 #import "RefreshControl.h"
-#import "Constants.h"
+
 #import <Masonry.h>
 
 @implementation RefreshControl

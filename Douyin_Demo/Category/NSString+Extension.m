@@ -30,4 +30,12 @@
     NSString *timeString = [NSString stringWithFormat:@"%.0f", time * 1000];
     return timeString;
 }
+
+- (NSURL *)urlScheme:(NSString *)scheme {
+    NSURLComponents *components = [[NSURLComponents alloc] initWithURL:[NSURL URLWithString:self] resolvingAgainstBaseURL:NO];
+    components.scheme = scheme;
+    return [components URL];
+}
+
+
 @end
