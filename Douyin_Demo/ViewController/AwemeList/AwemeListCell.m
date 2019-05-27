@@ -9,8 +9,12 @@
 #import "AwemeListCell.h"
 #import "AVPlayerView.h"
 #import "Aweme.h"
+#import "MusicAlbumView.h"
 
 @interface AwemeListCell ()<AVPlayerUpdateDelegate>
+
+@property (nonatomic, strong) UIView *container;
+
 @end
 
 @implementation AwemeListCell
@@ -32,9 +36,31 @@
     [self.contentView addSubview:_playerView];
     
     
+    
+    //init hover on player view container
+    _container = [UIView new];
+    [self.contentView addSubview:_container];
+    
+    _musicAlbum = [MusicAlbumView new];
+    [_container addSubview:_musicAlbum];
+    
+    
     [_playerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
+    
+    [_container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+    
+    [_musicAlbum mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.mas_bottom).offset(-100);
+        make.right.equalTo(self).inset(10);
+        make.width.height.mas_equalTo(50);
+    }];
+    
+    
+    
 }
 
 - (void)prepareForReuse {
@@ -62,7 +88,7 @@
 //            [self startLoadingPlayItemAnim:NO];
             
             _isPlayerReady = YES;
-//            [_musicAlum startAnimation:_aweme.rate];
+            [_musicAlbum startAnimation:_aweme.rate];
             
             if(_onPlayerReady) {
                 _onPlayerReady();

@@ -11,7 +11,7 @@ typedef void (^OnPlayerReady)(void);
 NS_ASSUME_NONNULL_BEGIN
 @class AVPlayerView;
 @class Aweme;
-
+@class MusicAlbumView;
 
 @interface AwemeListCell : UITableViewCell
 
@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) OnPlayerReady    onPlayerReady;
 @property (nonatomic, assign) BOOL             isPlayerReady;
+@property (nonatomic, strong) MusicAlbumView   *musicAlbum;
 
 - (void)initData:(Aweme *)aweme;
 - (void)play;

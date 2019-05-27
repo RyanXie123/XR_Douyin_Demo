@@ -20,6 +20,7 @@
 		CF32EFC4229A2FC300ED21FA /* AwemeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFC3229A2FC300ED21FA /* AwemeListController.m */; };
 		CF32EFC7229A311500ED21FA /* AwemeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFC6229A311500ED21FA /* AwemeListCell.m */; };
 		CF32EFC9229A691000ED21FA /* awemes.json in Resources */ = {isa = PBXBuildFile; fileRef = CF32EFC8229A691000ED21FA /* awemes.json */; };
+		CF32EFCC229A80B900ED21FA /* MusicAlbumView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF32EFCB229A80B900ED21FA /* MusicAlbumView.m */; };
 		CF50221421B50A29008AC826 /* RefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF50221321B50A29008AC826 /* RefreshControl.m */; };
 		CF50221721B51E50008AC826 /* ChatTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF50221621B51E50008AC826 /* ChatTextView.m */; };
 		CF5950AF2296A04100CFE0DD /* AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5950AE2296A04100CFE0DD /* AVPlayerView.m */; };
@@ -80,6 +81,8 @@
 		CF32EFC5229A311500ED21FA /* AwemeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListCell.h; sourceTree = "<group>"; };
 		CF32EFC6229A311500ED21FA /* AwemeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListCell.m; sourceTree = "<group>"; };
 		CF32EFC8229A691000ED21FA /* awemes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awemes.json; sourceTree = "<group>"; };
+		CF32EFCA229A80B900ED21FA /* MusicAlbumView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicAlbumView.h; sourceTree = "<group>"; };
+		CF32EFCB229A80B900ED21FA /* MusicAlbumView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicAlbumView.m; sourceTree = "<group>"; };
 		CF50221221B50A29008AC826 /* RefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshControl.h; sourceTree = "<group>"; };
 		CF50221321B50A29008AC826 /* RefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshControl.m; sourceTree = "<group>"; };
 		CF50221521B51E50008AC826 /* ChatTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextView.h; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				CF32EFC3229A2FC300ED21FA /* AwemeListController.m */,
 				CF32EFC5229A311500ED21FA /* AwemeListCell.h */,
 				CF32EFC6229A311500ED21FA /* AwemeListCell.m */,
+				CF32EFCA229A80B900ED21FA /* MusicAlbumView.h */,
+				CF32EFCB229A80B900ED21FA /* MusicAlbumView.m */,
 			);
 			path = AwemeList;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE86F0521A80CAC0066FC91 /* Assets.xcassets */,
+				CF32EFC8229A691000ED21FA /* awemes.json */,
 				CF73BE2321B7B9D4002A4EFC /* Emoticons.bundle */,
 			);
 			path = resource;
@@ -299,7 +305,6 @@
 		CFE86EFB21A80CAB0066FC91 /* Douyin_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				CF32EFC8229A691000ED21FA /* awemes.json */,
 				CF32EFAE2299438C00ED21FA /* PrefixHeader.pch */,
 				CF69FECA21ABD4D5008211B4 /* resource */,
 				CF69FEC521ABD174008211B4 /* ViewController */,
@@ -483,6 +488,7 @@
 				CF32EFAD2299397800ED21FA /* WebCacheHelper.m in Sources */,
 				CFF48E8821A9046B00181F85 /* NetworkHelper.m in Sources */,
 				CF32EFC4229A2FC300ED21FA /* AwemeListController.m in Sources */,
+				CF32EFCC229A80B900ED21FA /* MusicAlbumView.m in Sources */,
 				CF5950AF2296A04100CFE0DD /* AVPlayerView.m in Sources */,
 				CFF48E9621A936C000181F85 /* UIWindow+Extension.m in Sources */,
 				CF8E0F9621B648ED00B1CB17 /* CircleProgressView.m in Sources */,
